@@ -12,7 +12,7 @@ net_connect = netmiko.ConnectHandler(
     username = username,
     password = password,
     port = port
-)
+), 
 
 show_version =net_connect.send_command ('show version')
 print(show_version)
