@@ -83,7 +83,83 @@ print()
 #print("    *\n","  * *\n"," *   *\n","*     *")
 #print("***   ***")
 #print("  *   *\n"," *   *\n"," *****") 
-print("       *\n","     *  *\n","   *      *\n"," *          *\n","*             *")
+print('       *\n',"     *  *\n","   *      *\n"," *          *\n","*             *")
 print("*               *")
 print("******      ******")
 print("      *     *\n","     *     *\n","     *     *\n","     *     *\n","     *******") 
+
+
+#Apostrophes are good if you want to:
+
+#Print('Something simple') 
+#But what if you're trying to print something like:
+
+#Print('This Isn't as simple') 
+#You would get an error. Python thinks your string starts with the first apostrophe and ends with the second.
+
+#In this case you would use quotation marks.
+
+#Print("This isn't as simple")
+#Now python realizes your string starts at the first quotation mark and ends at the last quotation mark. It interprets the apostrophe simply as a string.
+
+#What if the string you're printing has quotation marks though?
+
+#Print("He said "this has quotation marks".") 
+#You'd get an error again, to fix this you'd have to use triple apostrophes.
+
+#Print('''He said "This has quotation marks".''') 
+
+#Singles would work fine also
+
+#'He said "This has quotation marks".'
+#Triples would be required for something like
+
+#'''He said "John's dog is dead".'''
+
+#They make no technical difference, as long as you use the same character at the beginning and end of your strings.
+#  In other words, this works:
+
+#"Hello, world!"
+#'Something.'
+
+#But this does NOT:
+
+#"Hello, world!'
+#'Something."
+
+#As for convention, apostrophes (') are usually used for individual characters or strings not shown to the end-user, and double-quotes (") are used for any text seen by the user.
+
+#You can use, within a string, a different type of quote to the outer pair literally:
+
+#"He said, 'this is interesting', to the crowd"
+#You can also escape a quote to use it literally using the backslash character:
+
+#'That\'s interesting'
+
+
+#In Python, single-quoted strings and double-quoted strings are the same. This PEP does not make a recommendation for this.
+#Pick a rule and stick to it. When a string contains single or double quote characters, however, use the other one to avoid backslashes in the string. It improves readability.
+
+#https://www.python.org/dev/peps/pep-0008/#string-quotes
+
+#Key Differences Between Single and Double Quotes in Python
+
+#Single Quotation Mark	                                                Double Quotation Mark
+#Represented as ‘ ‘	                                                    Represented as ” “
+#Single quotes for anything that behaves like an Identifier.	        Double quotes generally we used for text.
+#Single quotes are used for regular expressions, dict keys or SQL.	    Double quotes are used for string representation.
+#Eg. ‘We “welcome” you.’	                                            Eg. “Hello it’s me.”
+
+#What if you have to use strings that may include both single and double quotes? 
+# For this, Python allows you to use triple quotes. A simple example for the same is shown below.
+#  Triple quotes also allow you to add multi-line strings to Python variables instead of being limited to single lines.
+
+#Example of triple quotes
+#sentence1 = '''He asked, "did you speak with him?"'''
+#print(sentence1)
+#sentence2 = '''"That's great", she said.'''
+#print(sentence2)
+#Output:
+
+#He asked, "did you speak with him?"
+##"That's great", she said.
